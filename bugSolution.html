@@ -1,0 +1,18 @@
+<p>The solution is straightforward.  Ensure that script tags are placed in the `<head>` or `<body>` of your HTML document, where they are correctly interpreted and executed.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Correct Script Placement</title>
+    <script>
+        alert('This script works!');
+    </script>
+</head>
+<body>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+```
+
+Avoid placing script tags within elements that are not designed to hold executable code.  If generating HTML dynamically with JavaScript (e.g., using template literals), carefully review the structure to prevent this kind of error.</p>
