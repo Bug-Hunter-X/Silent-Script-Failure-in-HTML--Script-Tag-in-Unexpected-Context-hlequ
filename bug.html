@@ -1,0 +1,13 @@
+<p>This is a common error in HTML that can be quite difficult to track down. It occurs when a script tag is included inside an element that doesn't support scripting, such as a <p> or <div> tag. For example:
+
+```html
+<p><script>alert('This will not work');</script></p>
+```
+
+This will often result in no visible error, but the script will not execute. The browser interprets the script tag, but doesn't know how to handle it within the given context.  This is different from a simple syntax error; the script is parsed, but not executed.</p>
+<p>Another example is putting a script inside an HTML comment.  While the comment may appear to prevent the script's execution, many browsers will still try to process it, potentially leading to unexpected behavior or errors:
+
+```html
+<!-- <script>alert('This might still run!');</script> -->
+```</p>
+<p>Sometimes, this happens due to improper use of template literals in JavaScript that generate this problematic HTML. The context of where the template literal is used is important to diagnose.</p>
